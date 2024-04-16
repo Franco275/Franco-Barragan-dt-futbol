@@ -9,4 +9,4 @@ Escriba un programa que:
 
 var nombre = "Franco";
 
-console.log("¡Hola, " + nombre + "! Bienvenido.");
+console.log("¡Buanas, " + nombre + "! Bienvenido.");
