@@ -23,19 +23,25 @@ function calcularEdad(fechaNacimiento) {
   var cumple = new Date(fechaNacimiento);
   var edad = hoy.getFullYear() - cumple.getFullYear();
   var mes = hoy.getMonth() - cumple.getMonth();
+  var dia = hoy.getDay() - cumple.getDay();
 
   if (mes < 0 || (mes === 0 && hoy.getDate() < cumple.getDate())) {
       edad--;
   }
-
-  return edad;
+  if (dia < 0 || (dia === 0 && hoy.getDate() < cumple.getDate())) {
+    edad--;
 }
+
+return edad;
+}
+
+
 
 var jugador = {
   nombre: "Luciano",
   apellido: "Rodriguez",
   apodo: "Lucho",
-  fechaNacimiento: "2003-07-16"
+  fechaNacimiento: "2003-04-18"
 };
 
 console.log(jugador.nombre + ' "'   + jugador.apodo  + '" ' +  jugador.apellido + ' (' + calcularEdad(jugador.fechaNacimiento) + ' años)')
