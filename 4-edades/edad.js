@@ -29,14 +29,11 @@ function calcularEdad(fechaNacimiento) {
     año--;
     if (dia < 0 || (dia === 0 && hoy.getDate() < cumple.getDate())) {
       año--;
+    }
   }
-  }
-
 
 return año;
 }
-
-
 
 var jugador = {
   nombre: "Luciano",
