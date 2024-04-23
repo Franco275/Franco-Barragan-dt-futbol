@@ -42,7 +42,7 @@ var jugador = {
   nombre: "Luciano",
   apellido: "Rodriguez",
   apodo: "Lucho",
-  fechaNacimiento: "2003-01-23"
+  fechaNacimiento: "2003-07-16"
 };
 
 console.log(jugador.nombre + ' "'   + jugador.apodo  + '" ' +  jugador.apellido + ' (' + calcularEdad(jugador.fechaNacimiento) + ' años)')
