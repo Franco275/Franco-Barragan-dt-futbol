@@ -21,18 +21,19 @@ https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Da
 function calcularEdad(fechaNacimiento) {
   var hoy = new Date();
   var cumple = new Date(fechaNacimiento);
-  var edad = hoy.getFullYear() - cumple.getFullYear();
+  var año = hoy.getFullYear() - cumple.getFullYear();
   var mes = hoy.getMonth() - cumple.getMonth();
   var dia = hoy.getDay() - cumple.getDay();
 
   if (mes < 0 || (mes === 0 && hoy.getDate() < cumple.getDate())) {
-      edad--;
+    año--;
+    if (dia < 0 || (dia === 0 && hoy.getDate() < cumple.getDate())) {
+      año--;
   }
-  if (dia < 0 || (dia === 0 && hoy.getDate() < cumple.getDate())) {
-    edad--;
-}
+  }
 
-return edad;
+
+return año;
 }
 
 
@@ -41,7 +42,7 @@ var jugador = {
   nombre: "Luciano",
   apellido: "Rodriguez",
   apodo: "Lucho",
-  fechaNacimiento: "2003-04-18"
+  fechaNacimiento: "2003-01-23"
 };
 
 console.log(jugador.nombre + ' "'   + jugador.apodo  + '" ' +  jugador.apellido + ' (' + calcularEdad(jugador.fechaNacimiento) + ' años)')
